@@ -1,12 +1,52 @@
 ﻿// Learning_Cpp.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+#define RETURN return 0;
 
 #include <iostream>
 
+#include "Learning_Cpp.h"
+#include "L_Random.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::cout << "Hello World!\n";
+
+	//Вот небольшая программа, которая генерирует 100 рандомных чисел
+	//L_RND_Print();//не рекомендуется. Слабый ГПСЧ
+	Algorithm_Random_Mersen();//Алгоритм Вихр Мерсенна
+
+
+
+	RETURN
 }
+
+void L_RND_Print()
+{
+	L_Random RD;
+	std::cout << "Call the L_RND_Print();" << std::endl;
+	// Выводим 100 случайных чисел
+	for (int count = 0; count < 10; ++count)
+	{
+		std::cout << RD.PRNG() << "\t";
+
+		// Если вывели 5 чисел, то вставляем символ новой строки
+		if ((count + 1) % 5 == 0)
+			std::cout << "\n";
+	}
+	//собственные встроенные генераторы случайных чисел
+	std::cout << "\n" << std::endl;
+	RD.R_Print();
+
+
+}
+void Algorithm_Random_Mersen()
+{
+	std::cout << "Call the Algorithm_Random_Mersen:" << std::endl;
+	L_Random RD;
+	RD.Mersen();
+}
+
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

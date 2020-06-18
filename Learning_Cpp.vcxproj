@@ -140,6 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Learning_Cpp.cpp" />
+    <ClCompile Include="L_Random.cpp" />
+    <ClCompile Include="L_Struct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Learning_Cpp.h" />
+    <ClInclude Include="L_Random.h" />
+    <ClInclude Include="L_Struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
